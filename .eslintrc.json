@@ -1,0 +1,42 @@
+{
+    "env": {
+        "node": true,
+        "commonjs": true,
+        "es2021": true
+    },
+    "extends": [
+        "prettier",
+        "airbnb-base"
+      ],
+    "plugins": [
+        "prettier"
+    ],
+    "overrides": [
+        {
+          "files": [ "client/**/*.js" ],
+          "parser": "@babel/eslint-parser",
+          "parserOptions": {
+            "requireConfigFile": false,
+            "ecmaFeatures": {
+              "jsx": true
+            },
+            "babelOptions": {
+              "presets": ["@babel/preset-react"]
+           }
+          },
+          "extends": [
+            "eslint:recommended",
+            "plugin:react/recommended"
+          ],
+          "plugins": [
+            "jsx"
+          ]
+        }
+      ],
+    "parserOptions": {
+        "ecmaVersion": "latest"
+    },
+    "rules": {
+        "prettier/prettier": "error"
+    }
+}
