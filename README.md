@@ -1,15 +1,17 @@
 # Node React Template Repository
 
-A single repository with a Node.js backend and a React Frontend.
-
-Can be used as a base and connected to any database as required.
+A simple to-do list app to familiarise myself with the PERN stack.
 
 ## Stack
 
-- React - frontend
-- Node.js + Express - backend
+| Technology          | Use                           |
+| ------------------- | ----------------------------- |
+| Node                | Back-end JavaScript Framework |
+| Express             | Web application framework     |
+| React               | Front-end framework           |
+| ESLint and Prettier | JavaScript Linting            |
 
-## To Start
+## Setup
 
 - Ensure Node.js is installed locally and clone this repository.
 - Install backend dependencies - `npm install`
