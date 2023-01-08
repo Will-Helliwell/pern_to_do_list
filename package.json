@@ -4,7 +4,7 @@
   "description": "A web app that makes it easier for users to request presents at Christmas.",
   "main": "index.js",
   "scripts": {
-    "start": "node server/index.js",
+    "start": "nodemon server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "npx eslint ."
   },
@@ -29,6 +29,7 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.11",
+    "nodemon": "^2.0.20",
     "prettier": "^2.8.1"
   }
 }
