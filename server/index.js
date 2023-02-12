@@ -14,9 +14,9 @@ app.use(express.json());
 // get all to_dos
 app.get('/to_dos', async (req, res) => {
   try {
-    const all_todos = await pool.query('SELECT * FROM to_do;');
-    const first_description = all_todos.rows[0].description;
-    res.json(first_description);
+    const query_result = await pool.query('SELECT * FROM to_do;');
+    const all_to_dos = query_result.rows;
+    res.json(all_to_dos);
   } catch (error) {
     res.json(error.message);
   }
@@ -26,11 +26,12 @@ app.get('/to_dos', async (req, res) => {
 app.post('/to_dos', async (req, res) => {
   try {
     const { description } = req.body;
-    const new_to_do = await pool.query(
+    const query_result = await pool.query(
       'INSERT INTO to_do (description) VALUES ($1) RETURNING *',
       [description]
     );
-    res.json(new_to_do.rows[0].to_do_id);
+    const inserted_id = query_result.rows[0].to_do_id;
+    res.json(inserted_id);
   } catch (error) {
     res.json(error);
   }
