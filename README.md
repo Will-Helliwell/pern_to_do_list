@@ -1,6 +1,8 @@
-# Node React Template Repository
+# PERN To Do List
 
-A simple to-do list app to familiarise myself with the PERN stack.
+A simple to-do list app to familiarise myself with the PERN stack. 
+
+Built using my own Node React Template Repository.
 
 ## Stack
 
@@ -10,6 +12,7 @@ A simple to-do list app to familiarise myself with the PERN stack.
 | Express             | Web application framework     |
 | React               | Front-end framework           |
 | ESLint and Prettier | JavaScript Linting            |
+| PostgreSQL          | Relational Database           |
 
 ## Setup
 
